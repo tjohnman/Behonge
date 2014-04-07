@@ -6,4 +6,12 @@ It's a simple state system. Events and draw and update calls are passed down fro
 
 Comes with SFML 2.1 static Windows binaries and required DLL files.
 
+####Disclaimer
+
 Not guaranteed to even work, not to mention not setting your computer on fire.
+
+This code was very hastily cobbled together and is intended as a personal way of having boilerplate stuff already in place for prototyping, Ludum Dares and whatnot. It is intended to be cut, modified or expanded as needed, not as a production framework. Performance, good coding practices and even functionality are **not** guaranteed.
+
+Suggestions and comments are welcome, but please keep the above in mind when doing so.
+
+The code (not including external libraries) is public domain.
