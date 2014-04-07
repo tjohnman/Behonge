@@ -47,10 +47,8 @@ Object * State::remove(Object * object)
 				_m_Objects[j] = _m_Objects[j+1];
 			}
 			_m_Objects.pop_back();
-			delete object;
-			break;
+			return object;
 		}
 	}
-	return object;
 }
 
