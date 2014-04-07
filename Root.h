@@ -15,7 +15,7 @@ public:
 	void draw(sf::RenderWindow * window);
 	void update(float delta);
 
-	void pushState(State * state);
+	void pushState(State * state, bool force = false);
 	State * popState();
 	void clearStateStack();
 

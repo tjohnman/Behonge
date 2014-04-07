@@ -33,9 +33,9 @@ void Root::update(float delta)
 		_m_StateStack.back()->update(delta);
 }
 
-void Root::pushState(State * state)
+void Root::pushState(State * state, bool force)
 {
-	if(_m_StateStack.back() != state)
+	if(_m_StateStack.back() != state || force)
 		_m_StateStack.push_back(state);
 }
 
