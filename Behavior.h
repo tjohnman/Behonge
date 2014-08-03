@@ -36,10 +36,10 @@ public:
 	/*
 		This method gets called every time the object receives an event.
 		Unlike objects, behaviors will always receive an event, even if
-		another behavior has catched it. The boolean parameter alreadyCatched
-		indicated whether this event was already catched.
+		another behavior has catched it. The boolean parameter alreadyCaught
+		indicated whether this event was already caught.
 	*/
-    virtual bool onEvent(const sf::Event & event, bool alreadyCatched = false){return false;};
+    virtual bool onEvent(const sf::Event & event, bool alreadyCaught = false){return false;};
 
     /*
 		If m_FireOnDraw is true, this method gets called on every frame.
