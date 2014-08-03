@@ -6,10 +6,10 @@
 /*
 **
 **	Behaviors are basically event handlers that attach to objects.
-**  Access your object through m_Object. Use properties.
-**  Use them to add modular functionality to objects.
+**  	Access your object through m_Object. Use properties.
+**  	Use them to add modular functionality to objects.
 **
-**  Default implementation does nothing.
+**  	Default implementation does nothing.
 **
 */
 
