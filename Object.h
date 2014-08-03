@@ -57,9 +57,9 @@ public:
     virtual Object * remove(Object * object);
 
 	/*
-		Add a behavior. The same instance can be
-		added multiple times. Returns the behavior if success,
-		NULL if behavior is currently attached somewhere else.
+		Add a behavior. Returns the behavior if success,
+		NULL if behavior is currently attached somewhere else
+		or to this object.
 	*/
     Behavior * attach(Behavior * behavior);
 
