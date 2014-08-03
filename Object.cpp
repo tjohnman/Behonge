@@ -23,14 +23,14 @@ Object::~Object()
 
 bool Object::onEvent(const sf::Event & event)
 {
-	bool eventWasCatched = false;
+	bool eventWasCaught = false;
 
 	for(unsigned int i=0; i<_m_Behaviors.size(); ++i)
 	{
-		eventWasCatched = _m_Behaviors[i]->onEvent(event, eventWasCatched);
+		eventWasCaught = _m_Behaviors[i]->onEvent(event, eventWasCaught);
 	}
 
-	if(eventWasCatched) return true;
+	if(eventWasCaught) return true;
 
 	for(unsigned int i=0; i<_m_Children.size(); ++i)
 	{
