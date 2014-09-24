@@ -50,5 +50,7 @@ Object * State::remove(Object * object)
 			return object;
 		}
 	}
+
+	return object;
 }
 
