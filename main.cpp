@@ -1,5 +1,6 @@
 #include "includes.h"
 #include "Root.h"
+#include "Audio.h"
 
 int main()
 {
@@ -44,6 +45,9 @@ int main()
 		root->draw(&window);
 		window.display();
 	}
+
+	// Unload assets
+	Audio::Cleanup();
 
 	return 0;
 }
