@@ -4,9 +4,9 @@ Behonge
 SFML boilerplate code for Ludum Dare.
 It's a simple state system. Events and draw and update calls are passed down from the main loop to the current game state. States are stored in stack form. States pass calls down to objects, which may or may not have children. Objects are to be subclassed, but feature attachable behaviors.
 
-All the header files are plentifully commented.
+Also includes a small static class that loads and plays sounds. Music should rely on SFML's sf::Music.
 
-Comes with SFML 2.1 static Windows binaries and required DLL files. Everything compiled with CodeBlocks/MinGW, so you might need to get your own binaries for development if your environment varies.
+All the header files are commented.
 
 ####Disclaimer
 
@@ -16,4 +16,4 @@ This code was very hastily cobbled together and is intended as a personal way of
 
 Suggestions and comments are welcome, but please keep the above in mind when doing so.
 
-The code (not including external libraries) is public domain.
+The code is public domain.
