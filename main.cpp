@@ -1,6 +1,7 @@
 #include "includes.h"
 #include "Root.h"
 #include "Audio.h"
+#include "Graphics.h"
 
 int main()
 {
@@ -48,6 +49,7 @@ int main()
 
 	// Unload assets
 	Audio::Cleanup();
+	Graphics::Cleanup();
 
 	return 0;
 }
