@@ -34,7 +34,7 @@ public:
 	/*
 		Called every frame.
 	*/
-	void update(float delta);
+	void update(double delta);
 
 	/*
 		Put a state on top of the stack. If force is true,

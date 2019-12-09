@@ -11,7 +11,7 @@ int main()
 
 	// Clock to calculate delta.
 	sf::Clock clock;
-	float delta;
+	double delta;
 
 	// I'll manage this, thanks.
 	window.setFramerateLimit(0);

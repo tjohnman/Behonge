@@ -38,7 +38,7 @@ public:
 	/*
 		Called every frame.
 	*/
-	virtual void update(float delta)=0;
+	virtual void update(double delta)=0;
 
 	/*
 		Add objects that will receive events, update and draw calls.

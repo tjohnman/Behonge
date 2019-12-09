@@ -37,7 +37,7 @@ public:
     /*
 		Called on every frame.
     */
-    virtual void update(float delta);
+    virtual void update(double delta);
 
 	/*
 		Returns a pointer to our vector of children objects.
@@ -71,17 +71,17 @@ public:
 	/*
 		Getters/setters for properties and strings.
 	*/
-    float getProperty(std::string propertyId);
+    double getProperty(std::string propertyId);
     std::string getString(std::string stringId);
 
-    void setProperty(std::string propertyId, float value);
+    void setProperty(std::string propertyId, double value);
     void setString(std::string stringId, std::string string);
 
 private:
 	std::vector<Object *> _m_Children;
 	std::vector<Behavior *> _m_Behaviors;
 
-	std::map<std::string, float> _m_Properties;
+	std::map<std::string, double> _m_Properties;
 	std::map<std::string, std::string> _m_Strings;
 };
 

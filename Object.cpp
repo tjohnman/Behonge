@@ -53,7 +53,7 @@ void Object::draw(sf::RenderTarget * target)
 	}
 }
 
-void Object::update(float delta)
+void Object::update(double delta)
 {
 	for(unsigned int i=0; i<_m_Behaviors.size(); ++i)
 	{
@@ -128,9 +128,9 @@ Behavior * Object::detach(std::string behaviorId)
 	return 0;
 }
 
-float Object::getProperty(std::string propertyId)
+double Object::getProperty(std::string propertyId)
 {
-	std::map<std::string, float>::iterator it;
+	std::map<std::string, double>::iterator it;
 	it = _m_Properties.find(propertyId);
 	if(it == _m_Properties.end()) return 0.f;
 	return it->second;
@@ -144,7 +144,7 @@ std::string Object::getString(std::string stringId)
 	return it->second;
 }
 
-void Object::setProperty(std::string propertyId, float value)
+void Object::setProperty(std::string propertyId, double value)
 {
 	_m_Properties[propertyId] = value;
 }

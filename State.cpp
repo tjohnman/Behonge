@@ -18,7 +18,7 @@ void State::draw(sf::RenderTarget * renderTarget)
 	}
 }
 
-void State::update(float delta)
+void State::update(double delta)
 {
 	for(unsigned int i=0; i<_m_Objects.size(); ++i)
 	{

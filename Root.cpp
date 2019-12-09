@@ -27,7 +27,7 @@ void Root::draw(sf::RenderWindow * window)
 		_m_StateStack.back()->draw(window);
 }
 
-void Root::update(float delta)
+void Root::update(double delta)
 {
 	if(_m_StateStack.size())
 		_m_StateStack.back()->update(delta);

@@ -49,7 +49,7 @@ public:
     /*
 		If m_FireOnUpdate is true, this method gets called on every frame.
 	*/
-    virtual void update(float delta){};
+    virtual void update(double delta){};
 
     /*
 		This method gets called just after the behavior is attached to an object.
