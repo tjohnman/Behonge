@@ -38,4 +38,12 @@ void Sprite::update(double delta) {
             this->_mCurrentAnimation->frame = this->_mCurrentAnimation->firstFrame;
         }
     } 
-} 
+}
+
+void Sprite::setPosition(double x, double y) {
+    this->_mSprite.setPosition(x, y);
+}
+
+sf::Vector2f Sprite::getPosition() {
+    return this->_mSprite.getPosition();
+}
