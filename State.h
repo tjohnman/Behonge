@@ -20,7 +20,7 @@ public:
 	/*
 		The constructor accepts a pointer with arbitrary data.
 	*/
-	State(void * data){};
+	State(void * data=0){};
 	virtual ~State(){};
 
 	/*
@@ -28,17 +28,17 @@ public:
 		Return value is ignored by default. Can be used to inform
 		that the vent was captured.
 	*/
-	virtual bool onEvent(const sf::Event & event)=0;
+	virtual bool onEvent(const sf::Event & event);
 
 	/*
 		Called every frame.
 	*/
-	virtual void draw(sf::RenderTarget * renderTarget)=0;
+	virtual void draw(sf::RenderTarget * renderTarget);
 
 	/*
 		Called every frame.
 	*/
-	virtual void update(double delta)=0;
+	virtual void update(double delta);
 
 	/*
 		Add objects that will receive events, update and draw calls.

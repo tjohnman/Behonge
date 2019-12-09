@@ -3,6 +3,8 @@
 #include "Audio.h"
 #include "Graphics.h"
 
+#include "StateTest.h"
+
 int main()
 {
 	// Initialize audio.
@@ -21,6 +23,9 @@ int main()
 
 	// Our controller class.
 	Root * root = Root::Instance();
+
+	StateTest testState;
+	root->pushState(&testState);
 
 	while(window.isOpen())
 	{

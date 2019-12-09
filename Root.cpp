@@ -35,7 +35,7 @@ void Root::update(double delta)
 
 void Root::pushState(State * state, bool force)
 {
-	if(_m_StateStack.back() != state || force)
+	if(!_m_StateStack.size() || _m_StateStack.back() != state || force)
 		_m_StateStack.push_back(state);
 }
 

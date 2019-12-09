@@ -4,14 +4,16 @@ class Sprite {
 public:
     /*
         Create a sprite with a given position and texture (loaded via Graphics).
+        Frame width should be specified for animating non-square sprite sheets.
     */
-    Sprite(const double x, const double y, const std::string graphicsName);
+    Sprite(const double x, const double y, const std::string graphicsName, const unsigned frameWidth=0);
+    Sprite();
     ~Sprite();
 
     /*
         Register an animation using sub-rectangles from the sprite's texture.
     */
-    void addAnimation(const std::string animationName, const std::string graphicsName, const unsigned duration=0, const unsigned firstFrame=0, const unsigned frameCount=0);
+    void addAnimation(const std::string animationName, const unsigned duration=0, const unsigned firstFrame=0, const unsigned frameCount=0);
 
     /*
         Draw the sprite.
@@ -34,8 +36,9 @@ public:
     void setPosition(double x, double y);
     sf::Vector2f getPosition();
 private:
+    void _updateTextureRect();
+    
     struct _tAnimation {
-        std::string graphics; // Name of the texture as loaded via Graphics.
         double frame; // Current frame.
         unsigned firstFrame; // First frame index of the animation.
         unsigned frameCount; // Number of total frames in animation.
@@ -43,6 +46,7 @@ private:
     };
 
     _tAnimation * _mCurrentAnimation;
+    unsigned _mFrameWidth;
     std::map<std::string, _tAnimation> _mAnimations;
     sf::Sprite _mSprite;
 };
