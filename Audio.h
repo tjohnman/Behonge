@@ -16,6 +16,11 @@
 class Audio {
 public:
     /*
+        Initializes buffers. Call on application start.
+    */
+    static void Init();
+
+    /*
             Preload an audio clip for playing it later.
             Assign it a name to use with the Play function.
 
@@ -43,7 +48,7 @@ public:
 
 private:
     static std::map<std::string, sf::SoundBuffer *> _s_Buffers;
-    static sf::Sound _s_Channels[256];
+    static sf::Sound * _s_Channels[256];
     static int _s_ChannelIndex;
 };
 

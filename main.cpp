@@ -5,6 +5,9 @@
 
 int main()
 {
+	// Initialize audio.
+	Audio::Init();
+	
 	// Create the window.
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Behonge", sf::Style::Close);
 	sf::Event event;

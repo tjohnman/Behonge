@@ -1,8 +1,14 @@
 #include "Audio.h"
 
 std::map<std::string, sf::SoundBuffer *> Audio::_s_Buffers;
-sf::Sound Audio::_s_Channels[256];
+sf::Sound * Audio::_s_Channels[256];
 int Audio::_s_ChannelIndex;
+
+void Audio::Init() {
+	for(unsigned i=0; i<256; ++i) {
+		Audio::_s_Channels[i] = new sf::Sound();
+	}
+}
 
 bool Audio::Load(std::string path, std::string name)
 {
@@ -33,7 +39,7 @@ sf::Sound * Audio::Play(std::string name)
 		return 0;
 	}
 
-	sf::Sound * sound = &_s_Channels[_s_ChannelIndex++%256];
+	sf::Sound * sound = Audio::_s_Channels[_s_ChannelIndex++%256];
 
 	sound->stop();
 	sound->setBuffer(*it->second);
@@ -50,4 +56,8 @@ void Audio::Cleanup()
 		delete it->second;
 	}
 	_s_Buffers.clear();
+
+	for(unsigned i=0; i<256; ++i) {
+		delete Audio::_s_Channels[i];
+	}
 }
