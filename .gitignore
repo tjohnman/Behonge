@@ -245,6 +245,7 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
+*.dSYM/
 .vscode/
 test.png
 test.wav
